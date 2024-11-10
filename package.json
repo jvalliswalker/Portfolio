@@ -4,12 +4,19 @@
   "description": "AS AN employer looking for candidates with experience building single-page applications\r I WANT to view a potential employee's deployed React portfolio of work samples\r SO THAT I can assess whether they're a good candidate for an open position",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "babel": "^6.23.0",
+    "eslint": "^9.14.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "vite": "^5.4.10",
