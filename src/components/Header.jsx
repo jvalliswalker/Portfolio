@@ -6,7 +6,7 @@ import Nav from "react-bootstrap/Nav";
 import "../styles/index.css";
 
 const links = [
-  <Nav.Link key={"about"} href="/about">
+  <Nav.Link key={"about"} href="/">
     About Me
   </Nav.Link>,
   <Nav.Link key={"portfolio"} href="/portfolio">

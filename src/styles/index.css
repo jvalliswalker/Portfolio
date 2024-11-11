@@ -5,3 +5,10 @@
 .customFooter {
   margin-bottom: 60px;
 }
+
+.nameplateImage {
+  height: 200px;
+  width: auto;
+  border-radius: 100%;
+  box-shadow: 1px 1px 7px black;
+}
