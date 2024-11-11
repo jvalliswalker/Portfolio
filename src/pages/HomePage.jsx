@@ -1,5 +1,30 @@
 function HomePage() {
-  return <div>HomePage placeholder</div>;
+  return (
+    <div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+      <div>HomePage placeholder</div>
+    </div>
+  );
 }
 
 export default HomePage;
