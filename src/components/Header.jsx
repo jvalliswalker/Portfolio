@@ -2,7 +2,6 @@ import { useState } from "react";
 // import { Link } from "react-router-dom";
 import Navigation from "./Navigation.jsx";
 import Nav from "react-bootstrap/Nav";
-
 import "../styles/index.css";
 
 const links = [
@@ -20,10 +19,10 @@ const links = [
   </Nav.Link>,
 ];
 
-function Header() {
+function Header({ linkStyling }) {
   return (
-    <div className="search-bar ui segement customHeader">
-      <Navigation links={links} />
+    <div className="search-bar ui segement customHeader fs-6">
+      <Navigation links={links} linkStyling={linkStyling} />
     </div>
   );
 }

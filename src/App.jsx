@@ -17,14 +17,22 @@ function App() {
     isDesktop: isDesktop,
   };
 
+  function styleLink(mediaQueries) {
+    if (mediaQueries.isMobile) {
+      return "me-auto fs-5";
+    } else {
+      return "me-auto fs-6";
+    }
+  }
+
   return (
-    <>
-      <Header />
+    <div>
+      <Header linkStyling={styleLink(mediaQueries)} />
       <div className="container">
         <Outlet context={[mediaQueries]} />
-        <Footer />
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }
 

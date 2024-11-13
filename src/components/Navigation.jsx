@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-function Navigation({ links }) {
+function Navigation({ links, linkStyling }) {
   return (
     <Navbar bg="primary" expand="lg" fixed="top">
       <Container>
@@ -10,8 +10,8 @@ function Navigation({ links }) {
           <Navbar.Brand>J. Vallis-Walker</Navbar.Brand>
         </Nav.Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">{links.map((link) => link)}</Nav>
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+          <Nav className={linkStyling}>{links.map((link) => link)}</Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
