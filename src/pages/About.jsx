@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import "../index.css";
 import { useOutletContext } from "react-router";
 
