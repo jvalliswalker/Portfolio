@@ -2,44 +2,16 @@ import { useEffect, useState } from "react";
 import "../index.css";
 import { useOutletContext } from "react-router";
 
-function styleHeadshot(mediaQueries) {
-  if (mediaQueries.isMobile) {
-    return "text-center pb-4";
-  } else {
-    return "d-inline float-start pe-4";
-  }
-}
-
-function styleAboutMeText(mediaQueries) {
-  if (mediaQueries.isMobile) {
-    return "fs-5";
-  } else {
-    return "fs-5";
-  }
-}
-
 function About() {
   const [mediaQueries] = useOutletContext();
-
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  const updateWindowWidth = () => {
-    setWindowWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateWindowWidth);
-  }, []);
-
-  const stylingMap = {};
 
   return (
     <div>
       <div className="container">
-        <div className={styleHeadshot(mediaQueries)}>
+        <div className={mediaQueries.aboutHeadshotStyling}>
           <img src="/images/headshot.png" className="nameplateImage" />
         </div>
-        <div className={styleAboutMeText(mediaQueries)}>
+        <div className={mediaQueries.aboutTextStyling}>
           <p>
             <span className="fw-bolder">Hi there!</span> My name is Jamil
             Vallis-Walker. I'm a full time developer and long time tech
