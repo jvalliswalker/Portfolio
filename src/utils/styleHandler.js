@@ -3,6 +3,18 @@ class StyleHandler {
     this.isMobile = isMobile;
     this.isTablet = isTablet;
     this.isDesktop = isDesktop;
+
+    this.project = new ProjectStyleHandler(
+      this.isMobile,
+      this.isTablet,
+      this.isDesktop
+    );
+
+    this.contact = new ContactStyleHandler(
+      this.isMobile,
+      this.isTablet,
+      this.isDesktop
+    );
   }
 
   get headerLinkStyling() {
@@ -28,8 +40,26 @@ class StyleHandler {
       return "fs-5";
     }
   }
+}
 
-  get projectImageStyling() {
+class ContactStyleHandler {
+  constructor(isMobile, isTablet, isDesktop) {
+    this.isMobile = isMobile;
+    this.isTablet = isTablet;
+    this.isDesktop = isDesktop;
+  }
+
+  get inputStyling() {}
+}
+
+class ProjectStyleHandler {
+  constructor(isMobile, isTablet, isDesktop) {
+    this.isMobile = isMobile;
+    this.isTablet = isTablet;
+    this.isDesktop = isDesktop;
+  }
+
+  get imageStyling() {
     if (this.isMobile) {
       return "project-image-mobile border border-4 border-black";
     } else {
@@ -37,15 +67,15 @@ class StyleHandler {
     }
   }
 
-  get projectImageTitleStyling() {
+  get titleStyling() {
     if (this.isMobile) {
-      return "text-center fw-bold fs-5";
+      return "text-center fw-bold fs-5 project-title-mobile pb-3";
     } else {
-      return "text-center fw-bold fs-2";
+      return "text-center fw-bold fs-2 pb-4";
     }
   }
 
-  get projectMiddleStyling() {
+  get middleStyling() {
     if (this.isMobile) {
       return "middle-mobile";
     } else {
@@ -53,7 +83,7 @@ class StyleHandler {
     }
   }
 
-  get projectButtonStyling() {
+  get buttonStyling() {
     if (this.isMobile) {
       return "btn bg-primary py-2 rounded-2 text-white";
     } else {
@@ -61,7 +91,7 @@ class StyleHandler {
     }
   }
 
-  get projectGithubIconStyling() {
+  get githubIconStyling() {
     if (this.isMobile) {
       return "github-small pointerOnHover";
     } else {

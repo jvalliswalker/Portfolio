@@ -43,6 +43,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 80%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
@@ -63,6 +64,10 @@
   opacity: 1;
 }
 
+.project-title-mobile {
+  min-width: 200px;
+}
+
 .github-small {
   height: 55px;
   width: auto;
@@ -71,7 +76,6 @@
 .github-medium {
   height: 60px;
   width: auto;
-  margin-left: 5rem;
 }
 
 .pointerOnHover:hover {

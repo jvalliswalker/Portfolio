@@ -3,28 +3,30 @@ function Project({ img, title, url, github, styling }) {
     window.open(url, "_blank").focus();
   }
 
+  const style = styling.project;
+
   return (
     <div className="project-image-container">
-      <img src={img} className={styling.projectImageStyling} />
-      <div className={styling.projectMiddleStyling}>
+      <img src={img} className={style.imageStyling} />
+      <div className={style.middleStyling}>
         <div className="container">
-          <div className="row mb-3">
-            <div className={styling.projectImageTitleStyling}>{title}</div>
+          <div className="row">
+            <div className={style.titleStyling}>{title}</div>
           </div>
           <div className="row">
-            <div className="col">
+            <div className="col d-flex justify-content-center">
               <div
                 onClick={() => navigateTo(url)}
-                className={styling.projectButtonStyling}
+                className={style.buttonStyling}
               >
                 Visit Site
               </div>
             </div>
-            <div className="col">
+            <div className="col d-flex justify-content-center">
               <img
                 src="\images\icon-github.png"
                 onClick={() => navigateTo(github)}
-                className={styling.projectGithubIconStyling}
+                className={style.githubIconStyling}
               />
             </div>
           </div>
