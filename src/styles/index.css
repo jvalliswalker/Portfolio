@@ -13,3 +13,67 @@
   border-radius: 100%;
   box-shadow: 1px 1px 7px black;
 }
+
+.project-image-container {
+  position: relative;
+}
+
+.project-image {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  opacity: 1;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.project-image-mobile {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  opacity: 0.4;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.middle-mobile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.project-image-container:hover .project-image {
+  opacity: 0.3;
+}
+
+.project-image-container:hover .middle {
+  opacity: 1;
+}
+
+.github-small {
+  height: 55px;
+  width: auto;
+}
+
+.github-medium {
+  height: 60px;
+  width: auto;
+  margin-left: 5rem;
+}
+
+.pointerOnHover:hover {
+  cursor: pointer;
+}

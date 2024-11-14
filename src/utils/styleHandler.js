@@ -28,6 +28,46 @@ class StyleHandler {
       return "fs-5";
     }
   }
+
+  get projectImageStyling() {
+    if (this.isMobile) {
+      return "project-image-mobile border border-4 border-black";
+    } else {
+      return "project-image overflow-hidden border border-4 border-black";
+    }
+  }
+
+  get projectImageTitleStyling() {
+    if (this.isMobile) {
+      return "text-center fw-bold fs-5";
+    } else {
+      return "text-center fw-bold fs-2";
+    }
+  }
+
+  get projectMiddleStyling() {
+    if (this.isMobile) {
+      return "middle-mobile";
+    } else {
+      return "middle";
+    }
+  }
+
+  get projectButtonStyling() {
+    if (this.isMobile) {
+      return "btn bg-primary py-2 rounded-2 text-white";
+    } else {
+      return "btn bg-primary py-3 rounded-2 text-white";
+    }
+  }
+
+  get projectGithubIconStyling() {
+    if (this.isMobile) {
+      return "github-small pointerOnHover";
+    } else {
+      return "github-medium pointerOnHover";
+    }
+  }
 }
 
 export default StyleHandler;
