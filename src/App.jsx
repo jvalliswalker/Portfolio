@@ -17,7 +17,7 @@ function App() {
       <div className="container">
         <Outlet context={[styleHandler]} />
       </div>
-      <Footer />
+      <Footer styleHandler={styleHandler} />
     </div>
   );
 }
