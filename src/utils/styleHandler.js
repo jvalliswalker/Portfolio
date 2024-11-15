@@ -15,6 +15,12 @@ class StyleHandler {
       this.isTablet,
       this.isDesktop
     );
+
+    this.footer = new FooterStyleHandler(
+      this.isMobile,
+      this.isTablet,
+      this.isDesktop
+    );
   }
 
   get headerLinkStyling() {
@@ -49,7 +55,39 @@ class ContactStyleHandler {
     this.isDesktop = isDesktop;
   }
 
-  get inputStyling() {}
+  get inputWrapperStyling() {
+    if (this.isMobile) {
+      return "mb-3";
+    } else if (this.isTablet) {
+      return "mb-3 contact-form-wrapper-tablet ";
+    } else {
+      return "mb-3 contact-form-wrapper";
+    }
+  }
+
+  get formWrapperStyling() {
+    if (this.isMobile) {
+      return "";
+    } else {
+      return "d-flex flex-column justify-content-center align-items-center";
+    }
+  }
+}
+
+class FooterStyleHandler {
+  constructor(isMobile, isTablet, isDesktop) {
+    this.isMobile = isMobile;
+    this.isTablet = isTablet;
+    this.isDesktop = isDesktop;
+  }
+
+  get iconStyling() {
+    if (this.isMobile) {
+      return "icon-small pointerOnHover";
+    } else {
+      return "icon-medium pointerOnHover";
+    }
+  }
 }
 
 class ProjectStyleHandler {

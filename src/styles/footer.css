@@ -1,0 +1,13 @@
+.icon-small {
+  height: 30px;
+  width: auto;
+}
+
+.icon-medium {
+  height: 30px;
+  width: auto;
+}
+
+.pointerOnHover:hover {
+  cursor: pointer;
+}
