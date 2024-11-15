@@ -1,33 +1,43 @@
 import { useOutletContext } from "react-router";
+import InputWithValidation from "../components/InputWithValidation";
 
 function Contact() {
   const [styleHandler] = useOutletContext();
 
   const style = styleHandler.contact;
 
+  const fieldValidationTracker = {
+    invalidName: false,
+    invalidEmail: false,
+    invalidMessage: false,
+  };
+
+  const handleNameMouseOut = () => {
+    console.log("hello name!");
+  };
+
+  const handleEmailMouseOut = () => {
+    console.log("hello email!");
+  };
+
+  const handleMessageMouseOut = () => {
+    console.log("hello message!");
+  };
+
   return (
-    <div>
-      <div class="mb-3 fw-bold fs-2">Contact Me</div>
+    <div className={style.formWrapperStyling}>
+      <div className="mb-3 fw-bold fs-2">Contact Me</div>
       <form>
-        <div class="mb-3">
-          <label for="contactInputName" class="form-label">
-            Name
-          </label>
-          <input type="email" class="form-control" id="contactInputName" />
+        <div className={style.inputWrapperStyling}>
+          <InputWithValidation labelText="Name" inputType="text" />
         </div>
-        <div class="mb-3">
-          <label for="contactInputEmail" class="form-label">
-            Email
-          </label>
-          <input type="email" class="form-control" id="contactInputEmail" />
+        <div className={style.inputWrapperStyling}>
+          <InputWithValidation labelText="Email" inputType="email" />
         </div>
-        <div class="mb-3">
-          <label class="form-label" for="contactInputMessage">
-            Message
-          </label>
-          <textarea class="form-control" id="contactInputMessage" rows="4" />
+        <div className={style.inputWrapperStyling}>
+          <InputWithValidation labelText="Message" inputType="richtext" />
         </div>
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" className="btn btn-primary">
           Submit
         </button>
       </form>
