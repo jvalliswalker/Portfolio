@@ -13,17 +13,30 @@ function Resume() {
           <div className={style.accordionColumnStyling}>
             <h6>Primary Coding Languages</h6>
             <ul>
-              <li>Apex (Java)</li>
-              <li>Javascript</li>
+              <li>JavaScript</li>
               <li>Python</li>
+              <li>Apex (Java)</li>
+              <li>HTML/CSS</li>
             </ul>
           </div>
           <div className={style.accordionColumnStyling}>
-            <h6>Coding Frameworks</h6>
+            <h6 className="mb-2">Coding Frameworks / Libraries</h6>
+            <div className="fst-italic">JavaScript/Web Development</div>
             <ul>
-              <li>React JS</li>
+              <li>React</li>
+              <li>Express</li>
+              <li>Node</li>
+            </ul>
+            <div className="fst-italic">Python</div>
+            <ul>
+              <li>Simple Salesforce API</li>
+              <li>Pandas</li>
+              <li>NumPy</li>
+            </ul>
+            <div className="fst-italic">Salesforce</div>
+            <ul>
               <li>Lightning Web Components</li>
-              <li>Bootstrap</li>
+              <li>Sales, Service, and CPQ Clouds</li>
             </ul>
           </div>
         </div>
@@ -38,19 +51,31 @@ function Resume() {
           <div className={style.accordionColumnStyling}>
             <h6>Development Experience</h6>
             <ul>
+              <li>Create and refactor Saleforce record hooks/triggers</li>
               <li>
-                Create and refactor record hooks/trigger automation for
-                Salesforce Databases
+                Create custom user interfaces for department-specific needs
               </li>
               <li>
-                Create custom user interfaces for department speciic needs
+                Create Python and JavasScripts scripts for quick and reliable
+                ETL (extract, transform, load) tasks
               </li>
             </ul>
           </div>
           <div className={style.accordionColumnStyling}>
             <h6>Projects / Notable Accomplishments</h6>
             <ul>
-              <li></li>
+              <li>
+                Transitioned company Salesforce Org from Classic to Lightning
+              </li>
+              <li>
+                Transitioned company Salesforce Org from single (US) currency to
+                multi-currency capability CPQ functionality
+              </li>
+              <li>
+                Built a python-based desktop application to quickly construct
+                and load CPQ Product Suites into Salesforce sandbox and
+                production environments
+              </li>
             </ul>
           </div>
         </div>
@@ -60,6 +85,7 @@ function Resume() {
 
   const nonTechnical = (
     <>
+      <h6>Project Management</h6>
       <p>
         At the{" "}
         <span>
@@ -81,8 +107,8 @@ function Resume() {
         projects.
       </p>
       <p>
-        Another group was made up of team leaders for the programs' various
-        departments. Here we would introduce, refine, and triage
+        The other group was made up of leadership members of the programs'
+        various departments. Here we would introduce, refine, and triage
         initiative-level projects as well as demo projects ready for final
         approval.{" "}
       </p>
