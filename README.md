@@ -4,7 +4,7 @@ In this assignment, I create a personal portfolio site using React as the primar
 
 ## Application
 
-You can visit this web app by [clicking here](https://www.). Below are screenshots of the application at various media sizes.
+You can visit this web app by [clicking here](https://jamils-portfolio.netlify.app/). Below are screenshots of the application at various media sizes.
 
 <table>
 <tr>
