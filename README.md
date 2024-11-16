@@ -12,10 +12,10 @@ You can visit this web app by [clicking here](https://www.). Below are screensho
     <th>Tablet View</th>
 </tr>
 <tr>
-    <td style="width: 38%">
-        <img src="./public/images/screenshot-mobile.png" height="300px">
+    <td width="34%" align="center">
+        <img src="./public/images/screenshot-mobile.png">
     </td>
-    <td>
+    <td >
         <img src="./public/images/screenshot-tablet.png" />
     </td>
 </tr>
