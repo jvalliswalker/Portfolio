@@ -1,63 +1,37 @@
-# C20-React-Portfolio
+# C20: Jamil's Portfolio (2.0)
 
-## User Story
+In this assignment, I create a personal portfolio site using React as the primary library. This site was designed with a mobile-first approach, and uses a front-end react server for site routing. Bootstrap was the primary css framework used, although custom modifications were made where needed.
 
-AS AN employer looking for candidates with experience building single-page applications
-I WANT to view a potential employee's deployed React portfolio of work samples
-SO THAT I can assess whether they're a good candidate for an open position
+## Application
 
-## Acceptance Criteria
+You can visit this web app by [clicking here](https://www.). Below are screenshots of the application at various media sizes.
 
-GIVEN a single-page application portfolio for a web developer
-
-~~WHEN I load the portfolio~~
-
-- ~~THEN I am presented with a page containing a header, a section for content, and a footer~~
-
-~~WHEN I view the header~~
-
-- ~~THEN I am presented with the developer's name and navigation with titles corresponding to different sections of the portfolio~~
-
-~~WHEN I view the navigation titles~~
-
-- ~~THEN I am presented with the titles About Me, Portfolio, Contact, and Resume, and the title corresponding to the current section is highlighted~~
-
-WHEN I click on a navigation title
-
-- THEN I am presented with the corresponding section below the navigation **_without the page reloading_** and that title is highlighted
-
-~~WHEN I load the portfolio the first time~~
-
-~~- THEN the About Me title and section are selected by default~~
-
-WHEN I am presented with the About Me section
-
-- THEN I see a recent photo or avatar of the developer and a short bio about them
-
-WHEN I am presented with the Portfolio section
-
-- THEN I see titled images of six of the developer’s applications with links to both the deployed applications and the corresponding GitHub repository
-
-WHEN I am presented with the Contact section
-
-- THEN I see a contact form with fields for a name, an email address, and a message
-
-- WHEN I move my cursor out of one of the form fields without entering text
-- THEN I receive a notification that this field is required
-
-WHEN I enter text into the email address field
-
-- THEN I receive a notification if I have entered an invalid email address
-
-WHEN I am presented with the Resume section
-
-- THEN I see a link to a downloadable resume and a list of the developer’s proficiencies
-
-WHEN I view the footer
-
-- THEN I am presented with text or icon links to the developer’s GitHub and LinkedIn profiles, and their profile on a third platform (Stack Overflow, Twitter)
+<table>
+<tr>
+    <th>Mobile View</th>
+    <th>Tablet View</th>
+</tr>
+<tr>
+    <td style="width: 38%">
+        <img src="./public/images/screenshot-mobile.png" height="300px">
+    </td>
+    <td>
+        <img src="./public/images/screenshot-tablet.png" />
+    </td>
+</tr>
+<tr>
+    <th colspan="2">Desktop View</th>
+</tr>
+<tr>
+    <td colspan="2">
+        <img src="./public/images/screenshot-desktop.png">
+    </td>
+</tr>
+</table>
 
 ## Code Sources
+
+Below is a list of outside sources I consulted for code reference/solutions when developing this site.
 
 Navbar With Toggle
 
@@ -77,3 +51,15 @@ useMediaQuery
 
 - https://www.npmjs.com/package/react-responsive
 - https://blog.logrocket.com/using-react-responsive-to-implement-responsive-design/
+
+useOutletContext
+
+- https://reactrouter.com/en/main/hooks/use-outlet-context
+
+"for" input property in React
+
+- https://stackoverflow.com/questions/22752116/react-ignores-for-attribute-of-the-label-element
+
+Boostrap React Accordion
+
+- https://react-bootstrap.netlify.app/docs/components/accordion/
