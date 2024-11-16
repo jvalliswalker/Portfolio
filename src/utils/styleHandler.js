@@ -21,6 +21,12 @@ class StyleHandler {
       this.isTablet,
       this.isDesktop
     );
+
+    this.resumeStyleHandler = new ResumeStyleHandler(
+      this.isMobile,
+      this.isTablet,
+      this.isDesktop
+    );
   }
 
   get headerLinkStyling() {
@@ -70,6 +76,22 @@ class ContactStyleHandler {
       return "";
     } else {
       return "d-flex flex-column justify-content-center align-items-center";
+    }
+  }
+}
+
+class ResumeStyleHandler {
+  constructor(isMobile, isTablet, isDesktop) {
+    this.isMobile = isMobile;
+    this.isTablet = isTablet;
+    this.isDesktop = isDesktop;
+  }
+
+  get accordionColumnStyling() {
+    if (this.isMobile) {
+      return "";
+    } else {
+      return "col";
     }
   }
 }
