@@ -12,7 +12,7 @@ You can visit this web app by [clicking here](https://www.). Below are screensho
     <th>Tablet View</th>
 </tr>
 <tr>
-    <td width="34%" align="center">
+    <td width="29.7%" align="center">
         <img src="./public/images/screenshot-mobile.png">
     </td>
     <td >
