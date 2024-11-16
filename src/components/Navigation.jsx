@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 function Navigation({ links, linkStyling }) {
   return (
-    <Navbar bg="primary" expand="lg" fixed="top">
+    <Navbar className="primary-color-theme" expand="lg" fixed="top">
       <Container>
         <Nav.Link key={"home"} href="/">
           <Navbar.Brand>J. Vallis-Walker</Navbar.Brand>

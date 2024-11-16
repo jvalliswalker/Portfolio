@@ -145,9 +145,9 @@ class ProjectStyleHandler {
 
   get buttonStyling() {
     if (this.isMobile) {
-      return "btn bg-primary py-2 rounded-2 text-white";
+      return "btn secondary-color-theme py-2 rounded-2 text-dark";
     } else {
-      return "btn bg-primary py-3 rounded-2 text-white";
+      return "btn secondary-color-theme py-3 rounded-2 text-dark";
     }
   }
 

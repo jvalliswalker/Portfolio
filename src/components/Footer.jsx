@@ -17,7 +17,7 @@ function Footer({ styleHandler }) {
 
   return (
     <div className="customFooter">
-      <Navbar className="bg-primary" fixed="bottom">
+      <Navbar className="primary-color-theme" fixed="bottom">
         <Container className="justify-content-center align-content-center">
           <div className="row gx-5">
             <div className="col">

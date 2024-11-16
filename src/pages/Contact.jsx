@@ -37,7 +37,7 @@ function Contact() {
         <div className={style.inputWrapperStyling}>
           <InputWithValidation labelText="Message" inputType="richtext" />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn primary-color-theme">
           Submit
         </button>
       </form>
