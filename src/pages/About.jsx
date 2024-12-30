@@ -21,9 +21,9 @@ function About() {
             my career and get started with this new skill set.
           </p>
           <p>
-            This site is a portfolio of the projects I've done during my time in
-            the UC Berkeley program. Take a look around, and feel free to reach
-            out via the Contact page if you'd like to connect.
+            This site is a portfolio of my personal and professional development
+            projects. Take a look around, and feel free to reach out via the
+            Contact page if you'd like to connect.
           </p>
         </div>
       </div>
