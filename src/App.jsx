@@ -14,9 +14,7 @@ function App() {
   return (
     <div>
       <Header linkStyling={styleHandler.headerLinkStyling} />
-      <div className="container">
-        <Outlet context={[styleHandler]} />
-      </div>
+      <Outlet context={[styleHandler]} />
       <Footer styleHandler={styleHandler} />
     </div>
   );
