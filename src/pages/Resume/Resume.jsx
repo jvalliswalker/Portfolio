@@ -1,5 +1,5 @@
-import SingleAccordion from "../components/SingleAccordion";
 import { useOutletContext } from "react-router";
+import { Accordion } from "react-bootstrap";
 
 function Resume() {
   const [styleHandler] = useOutletContext();
@@ -124,44 +124,46 @@ function Resume() {
   );
 
   return (
-    <>
-      <h6>Thanks for your interest!</h6>
-      <div className="mb-3">
-        <p>
-          You can download a copy of my resume by{" "}
-          <a href="https://drive.google.com/uc?export=download&id=10taFQdyCTgh81d3MzmV5yoNwwlvTcCWk">
-            clicking here
-          </a>
-          . You can also visit my LinkedIn, Github, and Stack Overflow pages via
-          the icons in the footer of this site.
-        </p>
-        <p>
-          In addition to these resources, I've also listed out some additional
-          information about my work relevant skills and experience in the
-          sections below.
-        </p>
-      </div>
-      <div>
+    <div className={style.isMobile ? "" : "row"}>
+      <div className="col-5">
+        <h6>Thanks for your interest!</h6>
         <div className="mb-3">
-          <SingleAccordion
-            title="Technical Skills & Proficiencies"
-            content={skillsAndProficiences}
-          />
-        </div>
-        <div className="mb-3">
-          <SingleAccordion
-            title="Projects & Work Experience"
-            content={projectsAndExperience}
-          />
-        </div>
-        <div className="mb-3">
-          <SingleAccordion
-            title="Non-Technical Skills & Experience"
-            content={nonTechnical}
-          />
+          <p>
+            You can download a copy of my resume by{" "}
+            <a href="https://drive.google.com/uc?export=download&id=10taFQdyCTgh81d3MzmV5yoNwwlvTcCWk">
+              clicking here
+            </a>
+            . You can also visit my LinkedIn, Github, and Stack Overflow pages
+            via the icons in the footer of this site.
+          </p>
+          <p>
+            In addition to these resources, I've also listed out some additional
+            information about my work relevant skills and experience in the
+            sections below.
+          </p>
         </div>
       </div>
-    </>
+      <div className="col-7">
+        <Accordion>
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>
+              Technical Skills & Proficiencies
+            </Accordion.Header>
+            <Accordion.Body>{skillsAndProficiences}</Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="2">
+            <Accordion.Header>Projects & Work Experience</Accordion.Header>
+            <Accordion.Body>{projectsAndExperience}</Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="3">
+            <Accordion.Header>
+              Non-Technical Skills & Experience
+            </Accordion.Header>
+            <Accordion.Body>{nonTechnical}</Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
+      </div>
+    </div>
   );
 }
 
