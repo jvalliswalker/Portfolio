@@ -4,6 +4,12 @@ class StyleHandler {
     this.isTablet = isTablet;
     this.isDesktop = isDesktop;
 
+    this.landing = new LandingStyleHandler(
+      this.isMobile,
+      this.isTablet,
+      this.isDesktop
+    );
+
     this.project = new ProjectStyleHandler(
       this.isMobile,
       this.isTablet,
@@ -27,6 +33,28 @@ class StyleHandler {
       this.isTablet,
       this.isDesktop
     );
+
+    this.portfolio = new PortfolioStyleHandler(
+      this.isMobile,
+      this.isTablet,
+      this.isDesktop
+    );
+  }
+}
+
+class LandingStyleHandler {
+  constructor(isMobile, isTablet, isDesktop) {
+    this.isMobile = isMobile;
+    this.isTablet = isTablet;
+    this.isDesktop = isDesktop;
+  }
+
+  get mainContainerStyling() {
+    if (this.isMobile) {
+      return "";
+    } else {
+      return "d-flex justify-content-center";
+    }
   }
 
   get headerLinkStyling() {
@@ -37,7 +65,7 @@ class StyleHandler {
     }
   }
 
-  get aboutHeadshotStyling() {
+  get headshotStyling() {
     if (this.isMobile) {
       return "text-center pb-4";
     } else {
@@ -45,11 +73,11 @@ class StyleHandler {
     }
   }
 
-  get aboutTextStyling() {
+  get textStyling() {
     if (this.isMobile) {
       return "fs-5";
     } else {
-      return "fs-5";
+      return "fs-5 about-text-desktop";
     }
   }
 }
@@ -156,6 +184,22 @@ class ProjectStyleHandler {
       return "github-small pointerOnHover";
     } else {
       return "github-medium pointerOnHover";
+    }
+  }
+}
+
+class PortfolioStyleHandler {
+  constructor(isMobile, isTablet, isDesktop) {
+    this.isMobile = isMobile;
+    this.isTablet = isTablet;
+    this.isDesktop = isDesktop;
+  }
+
+  get columnStyling() {
+    if (this.isMobile) {
+      return "pb-4";
+    } else {
+      return "pb-4 col-6";
     }
   }
 }
