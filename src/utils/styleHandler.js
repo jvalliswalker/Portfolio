@@ -48,6 +48,22 @@ class StyleHandler {
       return "underlined-header";
     }
   }
+
+  get paragraphStyling() {
+    if (this.isMobile) {
+      return "fs-5";
+    } else {
+      return "";
+    }
+  }
+
+  get siteWrapper() {
+    return "col d-flex flex-column align-items-center";
+  }
+
+  get iconWrapper() {
+    return "icon-pointer d-flex flex-column align-items-center";
+  }
 }
 
 class LandingStyleHandler {
@@ -78,14 +94,6 @@ class LandingStyleHandler {
       return "text-center pb-4";
     } else {
       return "d-inline float-start pe-4";
-    }
-  }
-
-  get textStyling() {
-    if (this.isMobile) {
-      return "fs-5";
-    } else {
-      return "";
     }
   }
 }
@@ -123,16 +131,12 @@ class ResumeStyleHandler {
     this.isDesktop = isDesktop;
   }
 
-  get accordionColumnStyling() {
+  get skillsAndProficiences() {
     if (this.isMobile) {
       return "";
     } else {
       return "";
     }
-  }
-
-  get siteWrapper() {
-    return "col d-flex flex-column align-items-center icon-pointer";
   }
 }
 
