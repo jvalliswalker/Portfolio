@@ -4,14 +4,14 @@ import Nav from "react-bootstrap/Nav";
 import "../styles/index.css";
 
 const links = [
-  <Nav.Link key={"portfolio"} href="/portfolio">
-    Portfolio
-  </Nav.Link>,
-  <Nav.Link key={"about"} href="/about">
+  <Nav.Link key="about" href="/about">
     About Me
   </Nav.Link>,
-  <Nav.Link key={"resume"} href="/resume">
-    Resume
+  <Nav.Link key="portfolio" href="/portfolio">
+    Projects
+  </Nav.Link>,
+  <Nav.Link key="contact" href="/contact">
+    Contact
   </Nav.Link>,
 ];
 
