@@ -4,13 +4,12 @@ import { useOutletContext } from "react-router";
 
 function About() {
   const [styleHandler] = useOutletContext();
-  const style = styleHandler.landing;
 
   return (
     <div>
       <div>
-        <div className={style.textStyling}>
-          <h2 className={styleHandler.underlinedHeader}>What I Offer</h2>
+        <h2 className={styleHandler.underlinedHeader}>What I Offer</h2>
+        <div className={styleHandler.paragraphStyling}>
           <h5>Communication</h5>
           <p>
             Communication is the backbone to any good project. I'm not the kind
@@ -56,8 +55,10 @@ function About() {
             state than it was when I found it.
           </p>
         </div>
-        <div className={style.textStyling}>
-          <h2 className={styleHandler.underlinedHeader}>My Story</h2>
+      </div>
+      <div>
+        <h2 className={styleHandler.underlinedHeader}>My Story</h2>
+        <div className={styleHandler.paragraphStyling}>
           <p>
             I first realized I was interested in technology when working at my
             first job out of college. The company was using an excel sheet to
@@ -88,6 +89,85 @@ function About() {
             figuring out what would make their life easier is fuel to my fire,
             and the process of creating and interating on a new or redesigned
             user interface is a blast.
+          </p>
+        </div>
+      </div>
+      <div className="mb-2">
+        <h2 className={styleHandler.underlinedHeader}>Technical Skills</h2>
+        <p>
+          My primary coding languages are{" "}
+          <span className="fw-bold">Javascript</span>,{" "}
+          <span className="fw-bold">Python</span>,{" "}
+          <span className="fw-bold">HTML/CSS</span>, and{" "}
+          <span className="fw-bold">Apex</span> (a modified version of Java).
+          Within these languages, I've worked with the following frameworks and
+          libraries:
+        </p>
+        <div className="row">
+          <div className={styleHandler.isMobile ? "" : "col"}>
+            <div className="fst-italic">JavaScript/Web Development</div>
+            <ul>
+              <li>React</li>
+              <li>Express</li>
+              <li>Node.js</li>
+            </ul>
+          </div>
+          <div className={styleHandler.isMobile ? "" : "col"}>
+            <div className="fst-italic">Python</div>
+            <ul>
+              <li>Simple Salesforce API</li>
+              <li>Pandas</li>
+              <li>NumPy</li>
+            </ul>
+          </div>
+          <div className={styleHandler.isMobile ? "" : "col"}>
+            <div className="fst-italic">Salesforce</div>
+            <ul>
+              <li>Lightning Web Components</li>
+              <li>Sales, Service, and CPQ Clouds</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 className={styleHandler.underlinedHeader}>Project Management</h2>
+        <div>
+          <p>
+            At the{" "}
+            <span>
+              <a
+                href="https://www.linkedin.com/company/making-waves-foundation/posts/?feedView=all"
+                target="_blank"
+              >
+                Making Waves Foundation
+              </a>{" "}
+            </span>
+            I lead interdepartmental meetings with two separate groups to
+            discuss new and ongoing technical projects.
+          </p>
+          <p>
+            One group was made up of several "power users" (non-developer but
+            more technically minded staff) from each of the program's
+            departments. Together we would discuss and triage new requests from
+            their respective departments, clarify requirments, and get feedback
+            for in-flight projects.
+          </p>
+          <p>
+            The other group was made up of leadership members of the programs'
+            various departments. Here we would introduce, refine, and triage
+            initiative-level projects as well as demo projects ready for final
+            approval.{" "}
+          </p>
+          <p>
+            At {""}
+            <a
+              href="https://www.linkedin.com/company/sambasafety/"
+              target="_blank"
+            >
+              SambaSafety
+            </a>{" "}
+            I've continued to be involved in the requirment gathering, QA, and
+            User Acceptance Testing aspects of the development process.{" "}
           </p>
         </div>
       </div>
