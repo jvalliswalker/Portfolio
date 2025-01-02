@@ -1,6 +1,5 @@
 import "../../styles/index.css";
 import "../../styles/contact.css";
-import "./about.css";
 import { useOutletContext } from "react-router";
 
 function About() {

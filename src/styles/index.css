@@ -3,6 +3,10 @@
   --secondary: #00fdf9;
 }
 
+p {
+  padding-bottom: 2vh;
+}
+
 /* Classes */
 
 .paragraph-hyperlink {
@@ -39,14 +43,45 @@
   border-image-source: linear-gradient(to right, #07adea, #ffffff00);
 }
 
+.project-type-header {
+  border-width: 2px;
+  border-image-source: linear-gradient(to right, #07adea, #07adea, #ffffff00);
+}
+
 .outlet-wrapper {
-  margin-top: 10vh;
-  max-width: 800px;
-  margin-bottom: 10vh;
+  position: absolute;
+  top: 55px;
+  overflow-y: scroll;
+  height: 88vh;
+  padding-top: 20px;
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-bottom: 20px;
+  width: 100%;
+  /* max-width: 850px; */
+}
+
+.outlet-wrapper-mobile {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
 }
 
 .customFooter {
   margin-bottom: 60px;
+}
+
+.icon-pointer {
+  cursor: pointer;
+}
+
+.icon-resume {
+  margin-top: -4px;
+  max-width: 60px;
+}
+
+.icon-linkedin-blue {
+  max-width: 50px;
 }
 
 .nameplateImage {

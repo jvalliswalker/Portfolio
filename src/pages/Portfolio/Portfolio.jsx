@@ -7,6 +7,14 @@ function Portfolio() {
 
   const courseProjects = [
     <Project
+      key="p3"
+      img="\images\skill-share-hub.png"
+      title="Skill Share Hub"
+      url="https://skillhub-uvg0.onrender.com/"
+      github="https://github.com/UCBX-2024-Team-Wombat/Skill-Share-Hub"
+      styling={styleHandler}
+    />,
+    <Project
       key="p2"
       img="\images\project-p2-2.png"
       title="Digidex"
@@ -20,14 +28,6 @@ function Portfolio() {
       title="WordNerd"
       url="https://ucbx-2024-team-wombat.github.io/WordNerd/"
       github="https://github.com/UCBX-2024-Team-Wombat/WordNerd"
-      styling={styleHandler}
-    />,
-    <Project
-      key="p3"
-      img=""
-      title="Skill Share Hub"
-      url="https://skillhub-uvg0.onrender.com/"
-      github="https://github.com/UCBX-2024-Team-Wombat/Skill-Share-Hub"
       styling={styleHandler}
     />,
   ];
@@ -45,8 +45,10 @@ function Portfolio() {
 
   return (
     <div className="container">
-      <h4>UC Berkeley Web Development Projects</h4>
-      <div className="row">
+      <h2 className={style.projectTypeHeader}>
+        UC Berkeley Web Development Projects
+      </h2>
+      <div>
         {courseProjects.map((project) => {
           return (
             <div className={style.columnStyling} key={project.key}>
@@ -55,7 +57,7 @@ function Portfolio() {
           );
         })}
       </div>
-      <h4>Micro Projects</h4>
+      <h2 className={style.projectTypeHeader}>Micro Projects</h2>
       <div className="row">
         {microBuilds.map((project) => {
           return (

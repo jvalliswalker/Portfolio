@@ -13,9 +13,13 @@ function App() {
   const styleHandler = new StyleHandler(isMobile, isTablet, isDesktop);
 
   return (
-    <div className="d-flex justify-content-center">
+    <div>
       <Header linkStyling={styleHandler.headerLinkStyling} />
-      <div className="outlet-wrapper">
+      <div
+        className={
+          isMobile ? "outlet-wrapper outlet-wrapper-mobile" : "outlet-wrapper"
+        }
+      >
         <Outlet context={[styleHandler]} />
       </div>
       <Footer styleHandler={styleHandler} />

@@ -85,7 +85,7 @@ class LandingStyleHandler {
     if (this.isMobile) {
       return "fs-5";
     } else {
-      return "fs-5";
+      return "";
     }
   }
 }
@@ -127,8 +127,12 @@ class ResumeStyleHandler {
     if (this.isMobile) {
       return "";
     } else {
-      return "col";
+      return "";
     }
+  }
+
+  get siteWrapper() {
+    return "col d-flex flex-column align-items-center icon-pointer";
   }
 }
 
@@ -207,7 +211,15 @@ class PortfolioStyleHandler {
     if (this.isMobile) {
       return "pb-4";
     } else {
-      return "pb-4 col-6";
+      return "pb-4";
+    }
+  }
+
+  get projectTypeHeader() {
+    if (this.isMobile) {
+      return "underlined-header underlined-header-mobile";
+    } else {
+      return "underlined-header project-type-header";
     }
   }
 }

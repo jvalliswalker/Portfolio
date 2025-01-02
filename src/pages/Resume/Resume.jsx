@@ -6,6 +6,14 @@ function Resume() {
 
   const style = styleHandler.resumeStyleHandler;
 
+  function navigateTo(url) {
+    window.open(url, "_blank").focus();
+  }
+
+  function downloadResume() {
+    window.location.assign("/resume/resume.pdf");
+  }
+
   const skillsAndProficiences = (
     <>
       <div className="container">
@@ -124,18 +132,48 @@ function Resume() {
   );
 
   return (
-    <div className={style.isMobile ? "" : "row"}>
-      <div className="col-5">
-        <h6>Thanks for your interest!</h6>
+    <div>
+      <div>
+        <h2 className={styleHandler.underlinedHeader}>Sites & Resources</h2>
         <div className="mb-3">
           <p>
-            You can download a copy of my resume by{" "}
-            <a href="https://drive.google.com/uc?export=download&id=10taFQdyCTgh81d3MzmV5yoNwwlvTcCWk">
-              clicking here
-            </a>
-            . You can also visit my LinkedIn, Github, and Stack Overflow pages
-            via the icons in the footer of this site.
+            Thanks so much for your interest! Here are links to my sites and
+            resume.
           </p>
+          <div className="row">
+            <div
+              className={style.siteWrapper}
+              onClick={() =>
+                navigateTo(
+                  "https://www.linkedin.com/in/jamil-vallis-walker-43706a60/"
+                )
+              }
+            >
+              <img
+                src="/images/icon-linkedin-blue.png"
+                alt="Blue Linkedin Icon"
+                className="icon-linkedin-blue mb-2"
+              />
+              <div>LinkedIn</div>
+            </div>
+            <div className={style.siteWrapper}>
+              <img
+                src="/images/icon-github.png"
+                className="icon-linkedin-blue mb-2"
+              />
+              <div>Github</div>
+            </div>
+            <div
+              className={style.siteWrapper}
+              onClick={() =>
+                navigateTo("/resume/Resume%20-%20J%2E%20Vallis-Walker.pdf")
+              }
+            >
+              <img src="/images/icon-resume.png" className="icon-resume mb-1" />
+              <div>Resume PDF</div>
+            </div>
+          </div>
+          <p></p>
           <p>
             In addition to these resources, I've also listed out some additional
             information about my work relevant skills and experience in the
@@ -143,7 +181,7 @@ function Resume() {
           </p>
         </div>
       </div>
-      <div className="col-7">
+      <div>
         <Accordion>
           <Accordion.Item eventKey="1">
             <Accordion.Header>
