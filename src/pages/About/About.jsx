@@ -9,9 +9,9 @@ function About() {
 
   return (
     <div>
-      <div className="container d-flex flex-column align-items-center">
+      <div>
         <div className={style.textStyling}>
-          <h2 className="">What I offer</h2>
+          <h2 className={styleHandler.underlinedHeader}>What I Offer</h2>
           <h5>Communication</h5>
           <p>
             Communication is the backbone to any good project. I'm not the kind
@@ -31,6 +31,7 @@ function About() {
             <a
               href="https://www.linkedin.com/in/jamil-vallis-walker-43706a60/details/recommendations/?detailScreenTabIndex=0"
               target="_blank"
+              className="paragraph-hyperlink"
             >
               This enthusiasm shows
             </a>
@@ -42,7 +43,11 @@ function About() {
             Bad technology costs time, money, and user frustration, which is bad
             for customers and staff alike (for a comical example of this, check
             out the intentionally poorly designed{" "}
-            <a href="https://userinyerface.com/" target="_blank">
+            <a
+              href="https://userinyerface.com/"
+              target="_blank"
+              className="paragraph-hyperlink"
+            >
               User Inyerface
             </a>
             ). When I meet with a new team and start learning about their
@@ -53,7 +58,7 @@ function About() {
           </p>
         </div>
         <div className={style.textStyling}>
-          <h2>My Story</h2>
+          <h2 className={styleHandler.underlinedHeader}>My Story</h2>
           <p>
             I first realized I was interested in technology when working at my
             first job out of college. The company was using an excel sheet to

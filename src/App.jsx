@@ -4,6 +4,7 @@ import Footer from "./components/Footer.jsx";
 import { useMediaQuery } from "react-responsive";
 import "bootstrap/dist/css/bootstrap.min.css";
 import StyleHandler from "./utils/styleHandler.js";
+import "./styles/index.css";
 
 function App() {
   const isMobile = useMediaQuery({ query: "(max-width: 500px)" });
@@ -12,9 +13,11 @@ function App() {
   const styleHandler = new StyleHandler(isMobile, isTablet, isDesktop);
 
   return (
-    <div>
+    <div className="d-flex justify-content-center">
       <Header linkStyling={styleHandler.headerLinkStyling} />
-      <Outlet context={[styleHandler]} />
+      <div className="outlet-wrapper">
+        <Outlet context={[styleHandler]} />
+      </div>
       <Footer styleHandler={styleHandler} />
     </div>
   );

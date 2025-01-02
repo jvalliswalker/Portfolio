@@ -3,6 +3,12 @@
   --secondary: #00fdf9;
 }
 
+/* Classes */
+
+.paragraph-hyperlink {
+  color: #0787d1 !important;
+}
+
 .customHeader {
   margin-bottom: 80px;
 }
@@ -14,6 +20,29 @@
 .secondary-color-theme {
   background-color: var(--secondary) !important;
   color: black;
+}
+
+.underlined-header {
+  color: #145a90;
+
+  margin-bottom: 3vh;
+  border: solid;
+  border-width: 2px;
+  border-image-slice: 1;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-image-source: linear-gradient(to right, #07adea, #ffffff00, #ffffff00);
+}
+
+.underlined-header-mobile {
+  border-image-source: linear-gradient(to right, #07adea, #ffffff00);
+}
+
+.outlet-wrapper {
+  margin-top: 10vh;
+  max-width: 800px;
+  margin-bottom: 10vh;
 }
 
 .customFooter {

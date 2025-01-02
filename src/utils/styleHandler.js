@@ -40,6 +40,14 @@ class StyleHandler {
       this.isDesktop
     );
   }
+
+  get underlinedHeader() {
+    if (this.isMobile) {
+      return "underlined-header underlined-header-mobile";
+    } else {
+      return "underlined-header";
+    }
+  }
 }
 
 class LandingStyleHandler {
@@ -77,7 +85,7 @@ class LandingStyleHandler {
     if (this.isMobile) {
       return "fs-5";
     } else {
-      return "fs-5 about-text-desktop";
+      return "fs-5";
     }
   }
 }
