@@ -13,6 +13,7 @@ function Portfolio() {
       url="https://skillhub-uvg0.onrender.com/"
       github="https://github.com/UCBX-2024-Team-Wombat/Skill-Share-Hub"
       styling={styleHandler}
+      description="A platform for skilled people to trade what they know for what they're excited to learn"
     />,
     <Project
       key="p2"
@@ -44,7 +45,7 @@ function Portfolio() {
   ];
 
   return (
-    <div className="container">
+    <div>
       <h2 className={style.projectTypeHeader}>
         UC Berkeley Web Development Projects
       </h2>

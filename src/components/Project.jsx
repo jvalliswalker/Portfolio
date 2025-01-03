@@ -1,4 +1,4 @@
-function Project({ img, title, url, github, styling }) {
+function Project({ img, title, url, github, styling, description }) {
   function navigateTo(url) {
     window.open(url, "_blank").focus();
   }
@@ -8,11 +8,14 @@ function Project({ img, title, url, github, styling }) {
   return (
     <div className="project-image-container">
       <img src={img} className={style.imageStyling} />
+      <div>
+        <div className={style.titleStyling}>
+          <div>{title}</div>
+        </div>
+        {/* <div className="project-description">{description}</div> */}
+      </div>
       <div className={style.middleStyling}>
         <div className="container">
-          <div className="row">
-            <div className={style.titleStyling}>{title}</div>
-          </div>
           <div className="row">
             <div className="col d-flex justify-content-center">
               <div

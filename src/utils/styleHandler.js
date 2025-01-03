@@ -165,17 +165,17 @@ class ProjectStyleHandler {
 
   get imageStyling() {
     if (this.isMobile) {
-      return "project-image-mobile border border-4 border-black";
+      return "project-image-mobile";
     } else {
-      return "project-image overflow-hidden border border-4 border-black";
+      return "project-image overflow-hidden";
     }
   }
 
   get titleStyling() {
     if (this.isMobile) {
-      return "text-center fw-bold fs-5 project-title-mobile pb-3";
+      return "project-title-mobile";
     } else {
-      return "text-center fw-bold fs-2 pb-4";
+      return "project-title";
     }
   }
 

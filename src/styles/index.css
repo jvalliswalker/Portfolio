@@ -94,6 +94,7 @@ p {
 
 .project-image-container {
   position: relative;
+  border: 4px solid black;
 }
 
 .project-image {
@@ -140,6 +141,19 @@ p {
 
 .project-image-container:hover .middle {
   opacity: 1;
+}
+
+.project-title {
+  position: absolute;
+  top: 6%;
+  left: -4px;
+  width: 300px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: var(--primary);
+  color: black;
+  border: 4px solid black;
 }
 
 .project-title-mobile {
