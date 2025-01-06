@@ -46,15 +46,15 @@ function Portfolio() {
 
   return (
     <div>
-      <h2 className={style.projectTypeHeader}>
-        UC Berkeley Web Development Projects
-      </h2>
+      <h2 className={style.projectTypeHeader}>UC Berkeley Course Projects</h2>
       <div>
         {courseProjects.map((project) => {
           return (
-            <div className={style.columnStyling} key={project.key}>
-              {project}
-            </div>
+            <>
+              <div className={style.columnStyling} key={project.key}>
+                {project}
+              </div>
+            </>
           );
         })}
       </div>

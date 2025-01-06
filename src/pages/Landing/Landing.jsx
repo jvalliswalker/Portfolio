@@ -10,7 +10,10 @@ function Landing() {
     <div>
       <div className={`container ${style.mainContainerStyling}`}>
         <div className={style.headshotStyling}>
-          <img src="/images/headshot.png" className="nameplateImage" />
+          <img
+            src="/images/headshot.png"
+            className="nameplateImage custom-shadow"
+          />
         </div>
         <div className={style.textStyling}>
           <p>

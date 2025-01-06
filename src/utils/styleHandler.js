@@ -45,7 +45,7 @@ class StyleHandler {
     if (this.isMobile) {
       return "underlined-header underlined-header-mobile";
     } else {
-      return "underlined-header";
+      return "underlined-header ";
     }
   }
 
@@ -58,7 +58,11 @@ class StyleHandler {
   }
 
   get siteWrapper() {
-    return "col d-flex flex-column align-items-center";
+    if (this.isMobile) {
+      return "d-flex flex-column align-items-center mb-5";
+    } else {
+      return "col d-flex flex-column align-items-center";
+    }
   }
 
   get iconWrapper() {
@@ -173,9 +177,9 @@ class ProjectStyleHandler {
 
   get titleStyling() {
     if (this.isMobile) {
-      return "project-title-mobile";
+      return "project-title-mobile custom-shadow";
     } else {
-      return "project-title";
+      return "project-title custom-shadow";
     }
   }
 
@@ -189,17 +193,17 @@ class ProjectStyleHandler {
 
   get buttonStyling() {
     if (this.isMobile) {
-      return "btn secondary-color-theme py-2 rounded-2 text-dark";
+      return "btn secondary-color-theme py-2 rounded-2 text-dark custom-shadow";
     } else {
-      return "btn secondary-color-theme py-3 rounded-2 text-dark";
+      return "btn secondary-color-theme py-3 rounded-2 text-dark custom-shadow";
     }
   }
 
   get githubIconStyling() {
     if (this.isMobile) {
-      return "github-small pointerOnHover";
+      return "github-small pointerOnHover project-icon-shape custom-shadow";
     } else {
-      return "github-medium pointerOnHover";
+      return "github-medium pointerOnHover project-icon-shape custom-shadow";
     }
   }
 }
@@ -223,7 +227,7 @@ class PortfolioStyleHandler {
     if (this.isMobile) {
       return "underlined-header underlined-header-mobile";
     } else {
-      return "underlined-header project-type-header";
+      return "underlined-header underlined-project-type-header";
     }
   }
 }

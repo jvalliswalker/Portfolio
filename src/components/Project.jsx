@@ -6,7 +6,7 @@ function Project({ img, title, url, github, styling, description }) {
   const style = styling.project;
 
   return (
-    <div className="project-image-container">
+    <div className="project-image-container custom-shadow">
       <img src={img} className={style.imageStyling} />
       <div>
         <div className={style.titleStyling}>
