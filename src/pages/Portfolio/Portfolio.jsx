@@ -15,14 +15,14 @@ function Portfolio() {
       styling={styleHandler}
       description="A platform for skilled people to trade what they know for what they're excited to learn"
     />,
-    <Project
-      key="p2"
-      img="\images\project-p2-2.png"
-      title="Digidex"
-      url="https://p2-digidex-in6j.onrender.com/"
-      github="https://github.com/UCBX-2024-Team-Wombat/P2-Digidex"
-      styling={styleHandler}
-    />,
+    // <Project
+    //   key="p2"
+    //   img="\images\project-p2-2.png"
+    //   title="Digidex"
+    //   url="https://p2-digidex-in6j.onrender.com/"
+    //   github="https://github.com/UCBX-2024-Team-Wombat/P2-Digidex"
+    //   styling={styleHandler}
+    // />,
     <Project
       key="p1"
       img="\images\project-p1.png"
