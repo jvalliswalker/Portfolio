@@ -4,6 +4,12 @@ class StyleHandler {
     this.isTablet = isTablet;
     this.isDesktop = isDesktop;
 
+    this.landing = new LandingStyleHandler(
+      this.isMobile,
+      this.isTablet,
+      this.isDesktop
+    );
+
     this.project = new ProjectStyleHandler(
       this.isMobile,
       this.isTablet,
@@ -27,6 +33,56 @@ class StyleHandler {
       this.isTablet,
       this.isDesktop
     );
+
+    this.portfolio = new PortfolioStyleHandler(
+      this.isMobile,
+      this.isTablet,
+      this.isDesktop
+    );
+  }
+
+  get underlinedHeader() {
+    if (this.isMobile) {
+      return "underlined-header underlined-header-mobile";
+    } else {
+      return "underlined-header ";
+    }
+  }
+
+  get paragraphStyling() {
+    if (this.isMobile) {
+      return "fs-5";
+    } else {
+      return "";
+    }
+  }
+
+  get siteWrapper() {
+    if (this.isMobile) {
+      return "d-flex flex-column align-items-center mb-5";
+    } else {
+      return "col d-flex flex-column align-items-center";
+    }
+  }
+
+  get iconWrapper() {
+    return "icon-pointer d-flex flex-column align-items-center";
+  }
+}
+
+class LandingStyleHandler {
+  constructor(isMobile, isTablet, isDesktop) {
+    this.isMobile = isMobile;
+    this.isTablet = isTablet;
+    this.isDesktop = isDesktop;
+  }
+
+  get mainContainerStyling() {
+    if (this.isMobile) {
+      return "";
+    } else {
+      return "d-flex justify-content-center";
+    }
   }
 
   get headerLinkStyling() {
@@ -37,19 +93,11 @@ class StyleHandler {
     }
   }
 
-  get aboutHeadshotStyling() {
+  get headshotStyling() {
     if (this.isMobile) {
       return "text-center pb-4";
     } else {
       return "d-inline float-start pe-4";
-    }
-  }
-
-  get aboutTextStyling() {
-    if (this.isMobile) {
-      return "fs-5";
-    } else {
-      return "fs-5";
     }
   }
 }
@@ -87,11 +135,11 @@ class ResumeStyleHandler {
     this.isDesktop = isDesktop;
   }
 
-  get accordionColumnStyling() {
+  get skillsAndProficiences() {
     if (this.isMobile) {
       return "";
     } else {
-      return "col";
+      return "";
     }
   }
 }
@@ -121,17 +169,17 @@ class ProjectStyleHandler {
 
   get imageStyling() {
     if (this.isMobile) {
-      return "project-image-mobile border border-4 border-black";
+      return "project-image-mobile";
     } else {
-      return "project-image overflow-hidden border border-4 border-black";
+      return "project-image overflow-hidden";
     }
   }
 
   get titleStyling() {
     if (this.isMobile) {
-      return "text-center fw-bold fs-5 project-title-mobile pb-3";
+      return "project-title-mobile custom-shadow";
     } else {
-      return "text-center fw-bold fs-2 pb-4";
+      return "project-title custom-shadow";
     }
   }
 
@@ -145,17 +193,41 @@ class ProjectStyleHandler {
 
   get buttonStyling() {
     if (this.isMobile) {
-      return "btn secondary-color-theme py-2 rounded-2 text-dark";
+      return "btn secondary-color-theme py-2 rounded-2 text-dark custom-shadow";
     } else {
-      return "btn secondary-color-theme py-3 rounded-2 text-dark";
+      return "btn secondary-color-theme py-3 rounded-2 text-dark custom-shadow";
     }
   }
 
   get githubIconStyling() {
     if (this.isMobile) {
-      return "github-small pointerOnHover";
+      return "github-small pointerOnHover project-icon-shape custom-shadow";
     } else {
-      return "github-medium pointerOnHover";
+      return "github-medium pointerOnHover project-icon-shape custom-shadow";
+    }
+  }
+}
+
+class PortfolioStyleHandler {
+  constructor(isMobile, isTablet, isDesktop) {
+    this.isMobile = isMobile;
+    this.isTablet = isTablet;
+    this.isDesktop = isDesktop;
+  }
+
+  get columnStyling() {
+    if (this.isMobile) {
+      return "pb-4";
+    } else {
+      return "pb-4";
+    }
+  }
+
+  get projectTypeHeader() {
+    if (this.isMobile) {
+      return "underlined-header underlined-header-mobile";
+    } else {
+      return "underlined-header underlined-project-type-header";
     }
   }
 }
