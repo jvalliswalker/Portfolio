@@ -1,7 +1,4 @@
 node_modules
 
-dist/*
-!dist/placeholder.txt
-
 # Local Netlify folder
 .netlify
