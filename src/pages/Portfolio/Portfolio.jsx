@@ -23,14 +23,14 @@ function Portfolio() {
     //   github="https://github.com/UCBX-2024-Team-Wombat/P2-Digidex"
     //   styling={styleHandler}
     // />,
-    <Project
-      key="p1"
-      img="\images\project-p1.png"
-      title="WordNerd"
-      url="https://ucbx-2024-team-wombat.github.io/WordNerd/"
-      github="https://github.com/UCBX-2024-Team-Wombat/WordNerd"
-      styling={styleHandler}
-    />,
+    // <Project
+    //   key="p1"
+    //   img="\images\project-p1.png"
+    //   title="WordNerd"
+    //   url="https://ucbx-2024-team-wombat.github.io/WordNerd/"
+    //   github="https://github.com/UCBX-2024-Team-Wombat/WordNerd"
+    //   styling={styleHandler}
+    // />,
   ];
 
   const microBuilds = [
